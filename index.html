@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="./js/script.js" defer></script>
+  </head>
+  <body>
+    <header class="header flex-between">
+      <figure class="header_icon_version flex-between">
+        <img
+          class="icon_img"
+          src="./img/Group_1.svg"
+          alt="icon_img"
+          width="19"
+          height="33"
+        />
+        <figcaption>v 2.01</figcaption>
+      </figure>
+      <div class="header_icon_exit">
+        <img src="./img/logout.svg" alt="icon_img" width="16" height="14" />
+      </div>
+    </header>
+    <main class="main grid">
+      <input type="radio" name="tab-btn" id="tab-btn-1" />
+      <label for="tab-btn-1">Имущество</label>
+      <input type="radio" name="tab-btn" id="tab-btn-2" />
+      <label for="tab-btn-2">Инвентаризация</label>
+      <input type="radio" name="tab-btn" id="tab-btn-3" />
+      <label for="tab-btn-3">Сотрудники</label>
+      <input type="radio" name="tab-btn" id="tab-btn-4" />
+      <label for="tab-btn-4">Уведомление</label>
+      <input type="radio" name="tab-btn" id="tab-btn-5" checked />
+      <label for="tab-btn-5">Локации</label>
+      <input type="radio" name="tab-btn" id="tab-btn-6" />
+      <label for="tab-btn-6">Настройки</label>
+      <input type="button" value="" id="tab-btn-7" />
+      <label for="tab-btn-7">Скрыть меню </label>
+      <section class="hidden" id="content-5">
+        <h2>Локации / Все локации</h2>
+        <div class="btn_groups flex-between">
+          <div class="btn_groups-first flex-between">
+            <button class="btn btn-active" type="button">Все локации</button>
+            <button class="btn" type="button">Импорт/Экспорт</button>
+            <button class="btn" type="button">Настройки</button>
+          </div>
+          <button class="btn btn-active" type="button" id="btn_sync">
+            Синхронизация <span>(17.05.2024 15:23:21)</span>
+          </button>
+        </div>
+        <div class="flex-between">
+          <button
+            class="btn btn-active btn_create"
+            type="button"
+            id="create_lock"
+          >
+            Создать локацию
+          </button>
+          <div class="flex-between btn_groups_search">
+            <label class="container"
+              >Поиск по точному вхождению
+              <input
+                type="checkbox"
+                name="chk_search"
+                id="chk_search"
+                checked
+              />
+              <span class="checkmark"></span>
+            </label>
+            <label class="search_container">
+              <input
+                class="search"
+                type="search"
+                name=""
+                id=""
+                placeholder="Поиск"
+              />
+              <span></span>
+            </label>
+          </div>
+        </div>
+        <ul>
+          <li>
+            <input type="checkbox" name="" id="" checked />
+            <span class="chb_circle"></span>
+            <button class="circle_button" type="button"></button>
+            <div>Локация 1</div>
+            <span>512</span>
+            <button class="edit_button" type="button" id="edit_button">
+              Редактировать
+            </button>
+            <button type="button" class="delete_button">Удалить</button>
+          </li>
+          <ul>
+            <li>
+              <input type="checkbox" name="" id="" />
+              <span class="chb_circle"></span>
+              <button class="circle_button" type="button"></button>
+              <div>Подотдел 1</div>
+              <span>10</span>
+              <span>Для утерь</span>
+            </li>
+            <li>
+              <input type="checkbox" name="" id="" checked />
+              <span class="chb_circle"></span>
+              <button class="circle_button" type="button"></button>
+              <div>Подотдел 2</div>
+              <span>100</span>
+            </li>
+            <ul>
+              <li>
+                <input type="checkbox" name="" id="" />
+                <span class="chb_circle"></span>
+                <button class="circle_button" type="button"></button>
+                <div>Подподотдел 1</div>
+                <span>2</span>
+                <span>Виртуальная</span>
+                <span class="last_span">Без штрихкода</span>
+              </li>
+            </ul>
+            <li>
+              <input type="checkbox" name="" id="" />
+              <span class="chb_circle"></span>
+              <button class="circle_button" type="button"></button>
+              <div>Подотдел 3</div>
+              <span>400</span>
+            </li>
+          </ul>
+          <li>
+            <input type="checkbox" name="" id="" />
+            <span class="chb_circle"></span>
+            <button class="circle_button" type="button"></button>
+            <div>Локация 2</div>
+            <span>100</span>
+          </li>
+          <li>
+            <input type="checkbox" name="" id="" />
+            <span class="chb_circle"></span>
+            <button class="circle_button" type="button"></button>
+            <div>Локация 3</div>
+            <span>100</span>
+          </li>
+        </ul>
+      </section>
+      <section class="hidden" id="content-6">
+        <h2>Настройка / Локации</h2>
+        <div>
+          <button class="btn" type="button">Имущество</button>
+          <button class="btn" type="button">Инвентаризация</button>
+          <button class="btn" type="button">Сотрудники</button>
+          <button class="btn btn-active" type="button">Локации</button>
+          <button class="btn" type="button">Уведомления</button>
+          <button class="btn" type="button">Справочники</button>
+          <button class="btn" type="button">Пользователь</button>
+        </div>
+        <h2>Настройка полей таблицы</h2>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Описание</th>
+              <th>Сортировка</th>
+              <th>ID</th>
+              <th>Тип поля</th>
+              <th>Выводить в таблицу</th>
+              <th>Обязательно</th>
+              <th>Удалить</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <button class="circle_button" type="button"></button>
+                Название
+                <button class="edit_button" type="button"></button>
+              </td>
+              <td>
+                <img src="./img/help.svg" alt="" width="24" height="24" />
+              </td>
+              <td><input type="number" name="" id="" value="500" /></td>
+              <td>1001</td>
+              <td>Строка</td>
+              <td class="ceil_inline">
+                <label class="container">
+                  <input type="checkbox" name="" id="" checked />
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td class="ceil_inline">
+                <label class="container">
+                  <input type="checkbox" name="" id="" checked />
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <button class="circle_button" type="button"></button>
+                Цена
+                <button class="edit_button" type="button"></button>
+              </td>
+              <td></td>
+              <td><input type="number" name="" id="" value="510" /></td>
+              <td>1002</td>
+              <td>Число</td>
+              <td class="ceil_inline">
+                <label class="container">
+                  <input type="checkbox" name="" id="" checked />
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td class="ceil_inline">
+                <label class="container">
+                  <input type="checkbox" name="" id="" checked />
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td class="ceil_inline">
+                <label class="container">
+                  <input type="checkbox" name="" id="" checked />
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button class="circle_button" type="button"></button>
+                МОЛ
+                <button class="edit_button" type="button"></button>
+              </td>
+              <td></td>
+              <td><input type="number" name="" id="" value="520" /></td>
+              <td>1003</td>
+              <td>Справочник</td>
+              <td class="ceil_inline">
+                <label class="container">
+                  <input type="checkbox" name="" id="" checked />
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td class="ceil_inline">
+                <label class="container">
+                  <input type="checkbox" name="" id="" checked />
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td class="ceil_inline">
+                <label class="container">
+                  <input type="checkbox" name="" id="" />
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button class="circle_button" type="button"></button>
+                Фото
+                <button class="edit_button" type="button"></button>
+              </td>
+              <td></td>
+              <td><input type="number" name="" id="" value="530" /></td>
+              <td>1004</td>
+              <td>Файл</td>
+              <td class="ceil_inline">
+                <label class="container">
+                  <input type="checkbox" name="" id="" checked />
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td class="ceil_inline">
+                <label class="container">
+                  <input type="checkbox" name="" id="" checked />
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td class="ceil_inline">
+                <label class="container">
+                  <input type="checkbox" name="" id="" />
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button class="circle_button" type="button"></button>
+                Цвет
+                <button class="edit_button" type="button"></button>
+              </td>
+              <td></td>
+              <td><input type="number" name="" id="" value="540" /></td>
+              <td>1005</td>
+              <td>Строка</td>
+              <td class="ceil_inline">
+                <label class="container">
+                  <input type="checkbox" name="" id="" checked />
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td class="ceil_inline">
+                <label class="container">
+                  <input type="checkbox" name="" id="" checked />
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td class="ceil_inline">
+                <label class="container">
+                  <input type="checkbox" name="" id="" />
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button class="circle_button" type="button"></button>
+                Локация
+                <button class="edit_button" type="button"></button>
+              </td>
+              <td></td>
+              <td><input type="number" name="" id="" value="550" /></td>
+              <td>1006</td>
+              <td>Справочник</td>
+              <td class="ceil_inline">
+                <label class="container">
+                  <input type="checkbox" name="" id="" checked />
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td class="ceil_inline">
+                <label class="container">
+                  <input type="checkbox" name="" id="" checked />
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td class="ceil_inline">
+                <label class="container">
+                  <input type="checkbox" name="" id="" />
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button class="circle_button" type="button"></button>
+                Количество
+                <button class="edit_button" type="button"></button>
+              </td>
+              <td></td>
+              <td><input type="number" name="" id="" value="560" /></td>
+              <td>1007</td>
+              <td>Число</td>
+              <td class="ceil_inline">
+                <label class="container">
+                  <input type="checkbox" name="" id="" checked />
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td class="ceil_inline">
+                <label class="container">
+                  <input type="checkbox" name="" id="" checked />
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td class="ceil_inline">
+                <label class="container">
+                  <input type="checkbox" name="" id="" />
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button class="circle_button" type="button"></button>
+                Описание
+                <button class="edit_button" type="button"></button>
+              </td>
+              <td></td>
+              <td><input type="number" name="" id="" value="570" /></td>
+              <td>1008</td>
+              <td>Текст</td>
+              <td class="ceil_inline">
+                <label class="container">
+                  <input type="checkbox" name="" id="" checked />
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td class="ceil_inline">
+                <label class="container">
+                  <input type="checkbox" name="" id="" checked />
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td class="ceil_inline">
+                <label class="container">
+                  <input type="checkbox" name="" id="" />
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button class="circle_button" type="button"></button>
+                Количество
+                <button class="edit_button" type="button"></button>
+              </td>
+              <td></td>
+              <td><input type="number" name="" id="" value="580" /></td>
+              <td>1009</td>
+              <td>Число</td>
+              <td class="ceil_inline">
+                <label class="container">
+                  <input type="checkbox" name="" id="" checked />
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td class="ceil_inline">
+                <label class="container">
+                  <input type="checkbox" name="" id="" checked />
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td class="ceil_inline">
+                <label class="container">
+                  <input type="checkbox" name="" id="" />
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <button class="btn btn-active btn_create" type="button">
+          Добавить поле
+        </button>
+      </section>
+    </main>
+    <footer class="footer flex-between">
+      <div class="footer_btns hidden">
+        <button class="btn btn-active btn-big" type="button">
+          <img src="./img/save.svg" alt="" width="14" height="14" />
+          Сохранить
+        </button>
+        <button class="btn btn-big" type="button">Отменить</button>
+      </div>
+      <div class="footer_text">
+        <span>Последний прием 20.09.2021 18:36:21</span>
+        <span>Последняя передача 20.09.2021 18:38:21</span>
+      </div>
+      <figure class="footer_icons flex-between">
+        <img
+          class="footer_icons_img"
+          src="./img/footer_icon.svg"
+          alt=""
+          width="17"
+          height="19"
+        />
+        <figcaption><a href="">Документация</a></figcaption>
+      </figure>
+    </footer>
+    <div id="modal_wrapper" class="modal hidden">
+      <form action="" class="modal_create hidden" id="modal_create">
+        <h3>Создать локацию</h3>
+        <input type="text" name="" placeholder="Название" />
+        <input type="number" name="" placeholder="Штрихкод" />
+        <input type="number" name="" placeholder="RFID" />
+        <div class="form_select">
+          <select name="" id="" class="modal_select">
+            <option value="0">Вложенность</option>
+          </select>
+        </div>
+        <label class="switch">
+          Виртуальная локация
+          <input type="checkbox" name="" checked />
+          <span class="slider round"></span>
+        </label>
+        <label class="switch">
+          Локация для утерь
+          <input type="checkbox" name="" checked />
+          <span class="slider round"></span>
+        </label>
+        <div class="flex-between">
+          <button class="btn btn-active btn-big save_button" type="button">
+            <img src="./img/save.svg" alt="" width="14" height="14" />
+            Создать
+          </button>
+          <button class="btn btn-big cansel_button" type="button">
+            Отменить
+          </button>
+        </div>
+      </form>
+      <form action="" class="modal_create hidden" id="modal_change">
+        <h3>Изменить локацию %название%</h3>
+        <input type="text" name="" placeholder="Название" value="Локация 11" />
+        <input
+          type="number"
+          name=""
+          placeholder="Штрихкод"
+          value="1123123123123"
+        />
+        <input type="number" name="" placeholder="RFID" value="1123123123123" />
+        <div class="form_select">
+          <select name="" id="" class="modal_select">
+            <option value="0">Вложенность</option>
+          </select>
+        </div>
+        <label class="switch">
+          Виртуальная локация
+          <input type="checkbox" name="" checked />
+          <span class="slider round"></span>
+        </label>
+        <label class="switch">
+          Локация для утерь
+          <input type="checkbox" name="" checked />
+          <span class="slider round"></span>
+        </label>
+        <div class="flex-between">
+          <button type="button" class="delete_button btn btn-big">
+            Удалить
+          </button>
+          <button class="btn btn-big cansel_button" type="button">
+            Отменить
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
